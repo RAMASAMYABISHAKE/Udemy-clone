@@ -57,13 +57,20 @@ body {
 .mylearning:hover .mylearning__popup{display: block;}
 
 .categories{display: flex; margin: 10px;justify-content: space-around;border-bottom: 1px solid black;padding: 10px;}
-.categories p{background-color:rgb(164, 53, 240) ; padding: 10px;color: white;border-radius: 30px;}
+.categories p{background-color:rgb(164, 53, 240) ; border: 1px solid rgb(164, 53, 240) ;;padding: 10px;color: white;border-radius: 30px;}
 
 .categories p a{text-decoration: none;color: white;}
+.categories p:hover{background-color:transparent;border: 1px solid rgb(164, 53, 240) ;color:black;transition: 1s;cursor: pointer;}
+.categories p:hover a{color: black;}
+.categories p a:hover {color:black;transition: 1s;}
 
 .saleimage img{width: 100%; position: relative;}
 /*.saleimage__box{width: 550px;height: 100px;background-color: white;border: 1px solid black;position: absolute; bottom: 180px;left: 100px;}*/
-.saleimage__offer{position: absolute;left: 8%;top:30%;border: 2px solid black;padding:2%; background-color: white;}
+.saleimage__offer{position: absolute;left: 8%;top:30%;border: 2px solid black;padding:2%; background-color: white;animation-name: zoom;animation-duration: 2s;opacity: 0;animation-fill-mode: forwards;}
+@keyframes zoom {0%{transform: scale(0);opacity: 0;}
+100%{transform: scale(1);opacity: 1;}
+    
+}
 
 .recomendation{padding: 10px; }
 .recomendation__container{display: flex;justify-content: space-between;margin-top: 10px;flex-wrap: wrap;}
